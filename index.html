@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#12151c">
+<title>Перекуп: Империя</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="bgfx"><i></i><i></i><i></i></div>
+<div id="app">
+  <header id="top">
+    <div class="topline">
+      <div class="money"><span class="mcoin" id="mcoin"></span><span id="money">0 ₽</span></div>
+      <button class="icon-btn" id="sndbtn" aria-label="звук">🔊</button>
+    </div>
+    <div class="subline"><span id="ips"></span><span id="boost"></span></div>
+  </header>
+  <main id="view"></main>
+  <nav id="nav"></nav>
+</div>
+<button id="evbtn" class="hidden"></button>
+<div id="modal" class="hidden"></div>
+<div id="toasts"></div>
+<div id="adov" class="hidden"><div>⏳ Реклама…</div></div>
+<div id="loading">Загрузка…</div>
+
+<script src="js/catalog.js"></script>
+<script src="js/econ.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/platform.js"></script>
+<script src="js/game.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
