@@ -17,7 +17,7 @@
     var v = n / Math.pow(1000, e + 2);
     return (v >= 100 ? v.toFixed(1) : v.toFixed(2)).replace('.', ',') + ' ' + SUF[e];
   };
-  G.fmt = function (n) { return G.num(n) + ' ₽'; };
+  G.fmt = function (n) { return G.num(n) + ' мон.'; };   // монеты — выдуманная валюта игры
   G.fmtTime = function (s) {
     s = Math.max(0, Math.round(s));
     if (s < 60) return s + ' с';

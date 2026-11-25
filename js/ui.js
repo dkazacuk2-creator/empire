@@ -157,7 +157,7 @@
     var add = G.invNew(), tot = G.S.inv;
     return '<div class="big"><div class="bigsvg">' + G.ICON('tab_inv') + '</div><div class="muted">Твои инвесторы</div><div class="n">' + G.num(tot) + '</div><div class="good">+' + G.num(tot * G.INV_BONUS * 100) + '% к доходу</div></div>' +
       '<div class="big"><div class="muted">Готовы вложиться сейчас</div><div class="n" id="invnew">' + G.num(add) + '</div>' +
-      '<div class="note">Продай империю инвестору — начнёшь заново с 400 ₽, но каждый инвестор навсегда даёт +' + (G.INV_BONUS * 100) + '% ко всему доходу. Чем больше заработаешь за всё время, тем больше инвесторов.</div>' +
+      '<div class="note">Продай империю инвестору — начнёшь заново с 400 монет, но каждый инвестор навсегда даёт +' + (G.INV_BONUS * 100) + '% ко всему доходу. Чем больше заработаешь за всё время, тем больше инвесторов.</div>' +
       '<button class="btn violet full" id="prest" ' + (add < 1 ? 'disabled' : '') + '>Продать империю<small>и получить ' + G.num(add) + ' инвест.</small></button>' +
       '<div class="note">Заработано за всё время: ' + fmt(G.S.life) + '<br>Следующий инвестор при ' + fmt(Math.pow(G.invTotal() + 1, 1 / G.INV_POW) * G.INV_DIV) + '</div></div>';
   }

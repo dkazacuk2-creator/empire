@@ -121,7 +121,7 @@
     },
     coin: function () {
       return '<circle cx="32" cy="32" r="26" fill="#e0a400"/><circle cx="32" cy="30" r="24" fill="#ffd36b"/><circle cx="32" cy="30" r="17" fill="none" stroke="#e0a400" stroke-width="3"/>' +
-        '<path d="M27 21h8a5 5 0 0 1 0 10h-8M27 21v18M24 35h11" stroke="#b07a00" stroke-width="3.5" fill="none" stroke-linecap="round"/>';
+        '<path d="M32.0 18.0L35.1 26.3L43.9 26.6L36.9 32.1L39.3 40.6L32.0 35.7L24.7 40.6L27.1 32.1L20.1 26.6L28.9 26.3z" fill="#c98a00" stroke="#b07a00" stroke-width="1.5" stroke-linejoin="round"/>';
     },
     globe: function () {
       return '<circle cx="32" cy="32" r="25" fill="#2a7dff"/><path d="M14 20c6 2 8 8 6 13s3 9 1 15c-6-4-10-10-10-16 0-5 1-9 3-12zM38 9c-2 5 2 9 7 9s6 6 3 10 0 10 5 11c2-3 3-7 3-11 0-9-7-17-18-19zM30 44c4-2 8 1 8 5s-3 6-5 7c-4-2-6-8-3-12z" fill="#5effa8"/><circle cx="32" cy="32" r="25" fill="none" stroke="#fff" stroke-width="2" opacity=".3"/>';
