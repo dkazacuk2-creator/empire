@@ -104,6 +104,7 @@
   };
   G.buyQty = function (b) {
     var m = G.S.buy;
+    if (G.S.biz[b.id].n < 1) return 1; // новое направление всегда открывается одной точкой
     if (m === 'max') return Math.max(1, G.maxBuy(b));
     if (m === 'next') { var o = G.S.biz[b.id]; return Math.max(1, G.nextMilestone(o.n).at - o.n); }
     return m;
