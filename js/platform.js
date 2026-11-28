@@ -83,4 +83,22 @@
     } catch (e) { end(false); return; }
     setTimeout(function () { end(true); }, 1500); // локально: «реклама» 1,5 секунды
   };
+
+  // Пикабу: полноэкранная реклама при смене вкладок — не в первые 3 минуты и не чаще раза в 3 минуты
+  var sessStart = Date.now(), lastInt = Date.now();
+  P.interstitial = function () {
+    if (P.name !== 'pikabu' || P.busy) return;
+    var now = Date.now();
+    if (now - sessStart < 3 * 60000 || now - lastInt < 3 * 60000) return;
+    lastInt = now; P.busy = true; G.paused = true;
+    var fin = false, end = function () { if (fin) return; fin = true; P.busy = false; G.paused = false; };
+    setTimeout(function () { if (!shown) end(); }, 4000);
+    var shown = false;
+    try {
+      P.sdk.ads.fullscreen.canShow().then(function (can) {
+        if (!can) return end();
+        shown = true; P.sdk.ads.fullscreen.show().then(end).catch(end);
+      }).catch(end);
+    } catch (e) { end(); }
+  };
 })(window.G = window.G || {});

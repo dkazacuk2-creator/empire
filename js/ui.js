@@ -226,7 +226,7 @@
     var t = e.target.closest('button, [data-tap]');
     if (!t) { if (e.target.id === 'modal') closeModal(); return; }
     var d = t.dataset;
-    if (d.tab) { UI.tab = d.tab; render(); $('view').scrollTop = 0; UI.sfx('click'); return; }
+    if (d.tab) { UI.tab = d.tab; render(); $('view').scrollTop = 0; UI.sfx('click'); if (G.Platform.interstitial) G.Platform.interstitial(); return; }
     if (d.buy) { G.S.buy = isNaN(+d.buy) ? d.buy : +d.buy; render(); return; }
     if (d.buyb) {
       var r = G.buy(d.buyb);
